@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["next/core-web-vitals", "plugin:react/recommended", "prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".d.ts", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules"]
+      }
+    }
+  }
+}
