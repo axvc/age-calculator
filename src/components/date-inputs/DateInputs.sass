@@ -1,0 +1,41 @@
+@import "../../styles/constants"
+
+.date-inputs
+  display: flex
+  gap: 24px
+  padding: 16px
+
+  .day, .month, .year
+    display: flex
+    flex-direction: column
+    gap: 8px
+    width: 160px
+
+    label
+      color: $color-smokey-grey
+      font-weight: 700
+      font-size: 12px
+      letter-spacing: 3px
+
+    input
+      all: unset
+      font-family: Poppins, sans-serif
+      font-size: $font-size-input
+      font-weight: 800
+      font-style: normal
+      color: $color-off-black
+      background: $color-white
+      border: 1px solid $color-light-grey
+      border-radius: 4px
+      padding: 4px 16px
+
+    .error-message
+      color: $color-light-red
+
+    &-error
+
+      label
+        color: $color-light-red
+
+      input
+        border: 1px solid $color-light-red
