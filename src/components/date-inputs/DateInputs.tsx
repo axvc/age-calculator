@@ -16,7 +16,7 @@ enum ErrorMessage {
   InvalidDay = 'Invalid day',
   InvalidMonth = 'Invalid month',
   InvalidYear = 'Invalid year',
-  InvalidDate = 'Invalid date',
+  InvalidDate = 'Must be a valid date',
   FutureDate = 'Must be in the past',
 }
 
@@ -106,8 +106,6 @@ export const DateInputs = ({ onDateChange }: Props) => {
       return;
     }
 
-    console.log(m, d, y);
-
     if (
       y > new Date().getFullYear() ||
       (y === new Date().getFullYear() && m > new Date().getMonth() + 1) ||
@@ -149,9 +147,9 @@ export const DateInputs = ({ onDateChange }: Props) => {
   return (
     <div class="date-inputs">
       <div class={`day ${dayError() && 'day-error'}`}>
-        <label for="day">DAY</label>
+        <label for="day-input">DAY</label>
         <input
-          name="day"
+          id="day-input"
           type="number"
           min={DateLimit.MinDay}
           max={DateLimit.MaxDay}
@@ -162,9 +160,9 @@ export const DateInputs = ({ onDateChange }: Props) => {
         {dayError() && <span class="error-message">{dayError()}</span>}
       </div>
       <div class={`month ${monthError() && 'month-error'}`}>
-        <label for="month">MONTH</label>
+        <label for="month-input">MONTH</label>
         <input
-          name="month"
+          id="month-input"
           type="number"
           min={DateLimit.MinMonth}
           max={DateLimit.MaxMonth}
@@ -175,9 +173,9 @@ export const DateInputs = ({ onDateChange }: Props) => {
         {monthError() && <span class="error-message">{monthError()}</span>}
       </div>
       <div class={`year ${yearError() && 'year-error'}`}>
-        <label for="year">YEAR</label>
+        <label for="year-input">YEAR</label>
         <input
-          name="year"
+          id="year-input"
           type="number"
           min={DateLimit.MinYear}
           max={new Date().getFullYear()}

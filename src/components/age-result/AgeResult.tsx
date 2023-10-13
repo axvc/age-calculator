@@ -1,4 +1,4 @@
-import './AgeResult.sass'
+import './AgeResult.sass';
 
 interface Props {
   days?: number | null;
@@ -9,9 +9,18 @@ interface Props {
 export const AgeResult = ({ days, months, years }: Props) => {
   return (
     <div class="age-result">
-      <p>{years ?? '--'} years</p>
-      <p>{months ?? '--'} months</p>
-      <p>{days ?? '--'} days</p>
+      <p class="line">
+        <span class="value">{years ?? '--'}</span>
+        <span class="label">years</span>
+      </p>
+      <p class="line">
+        <span class="value">{months ?? '--'}</span>
+        <span class="label">months</span>
+      </p>
+      <p class="line">
+        <span class="value">{days ?? '--'}</span>
+        <span class="label">days</span>
+      </p>
     </div>
-  )
-}
+  );
+};
