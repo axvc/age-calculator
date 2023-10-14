@@ -12,6 +12,7 @@ export const Divider = ({ onSubmit }: Props) => {
       <button onClick={onSubmit}>
         <img src={ArrowIcon} alt="Arrow" />
       </button>
+      <div class="line mobile-divider"></div>
     </div>
   );
 };

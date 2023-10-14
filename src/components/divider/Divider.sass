@@ -6,9 +6,12 @@
   align-items: center
   padding: 16px
 
+  @media screen and (max-width: 400px)
+    height: 40px
+
   .line
     height: 1px
-    width: 80%
+    width: 90%
     background: $color-light-grey
 
   button
@@ -20,3 +23,16 @@
 
     &:hover
       background: $color-off-black
+
+    @media screen and (max-width: 400px)
+      padding: 12px 16px
+
+      img
+        width: 20px
+        transform: translateY(4px)
+
+  .mobile-divider
+    display: none
+
+    @media screen and (max-width: 400px)
+      display: block

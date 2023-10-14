@@ -5,11 +5,18 @@
   gap: 24px
   padding: 16px
 
+  @media screen and (max-width: 400px)
+    gap: 12px
+
   .day, .month, .year
     display: flex
     flex-direction: column
     gap: 8px
     width: 160px
+
+    @media screen and (max-width: 400px)
+      width: 74px
+      gap: 4px
 
     label
       color: $color-smokey-grey
@@ -17,17 +24,25 @@
       font-size: 12px
       letter-spacing: 3px
 
+      @media screen and (max-width: 400px)
+        font-size: 11px
+        letter-spacing: 2px
+
     input
       all: unset
       font-family: Poppins, sans-serif
       font-size: $font-size-input
-      font-weight: 800
+      font-weight: $font-extra-bold
       font-style: normal
       color: $color-off-black
       background: $color-white
       border: 1px solid $color-light-grey
       border-radius: 4px
       padding: 4px 16px
+
+      @media screen and (max-width: 400px)
+        font-size: 16px
+        padding: 8px 16px
 
     .error-message
       color: $color-light-red
