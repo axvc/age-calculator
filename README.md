@@ -1,32 +1,3 @@
-## Usage
-
-```bash
-$ npm install # or pnpm install or yarn install
-```
-
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
-
 # Age Calculator
 
 This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q).
@@ -36,6 +7,8 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshots](#screenshots)
+    - [Usage](#usage)
+    - [Available Scripts](#available-scripts)
 - [My process](#my-process)
     - [Built with](#built-with)
 
@@ -62,6 +35,35 @@ Users should be able to:
 ![](./desc/screenshot-1.png)
 ![](./desc/screenshot-2.png)
 
+## Usage
+
+```bash
+$ bun install # or npm install or pnpm install or yarn install
+```
+
+### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+
+## Available Scripts
+
+In the project directory, you can run:
+
+```bash
+$ bun run dev # or npm run dev or pnpm run dev or yarn run dev
+```
+
+Runs the app in the development mode.<br>
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+```bash
+$ bun run build # or npm run build or pnpm run build or yarn run build
+```
+
+Builds the app for production to the `dist` folder.<br>
+It correctly bundles Solid in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
 ## My process
 
 ### Built with
@@ -70,6 +72,4 @@ Users should be able to:
 - [Typescript](https://www.typescriptlang.org/) - Main language
 - [Solid.js](https://www.solidjs.com/) - JS/TS library
 - [SCSS/Sass](https://sass-scss.ru/) - CSS Preprocessors
-- [React Beautiful DND](https://github.com/atlassian/react-beautiful-dnd) - Dnd library
-- [React Transition Group](https://github.com/reactjs/react-transition-group) - Animation library
 - [ESLint](https://eslint.org/) - Linter
