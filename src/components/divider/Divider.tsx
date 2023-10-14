@@ -1,7 +1,17 @@
-import './Divider.sass'
+import './Divider.sass';
+import ArrowIcon from 'assets/icons/icon-arrow.svg';
 
-export const Divider = () => {
-  return (
-    <div class="divider" />
-  )
+interface Props {
+  onSubmit: () => void;
 }
+
+export const Divider = ({ onSubmit }: Props) => {
+  return (
+    <div class="divider">
+      <div class="line"></div>
+      <button onClick={onSubmit}>
+        <img src={ArrowIcon} alt="Arrow" />
+      </button>
+    </div>
+  );
+};

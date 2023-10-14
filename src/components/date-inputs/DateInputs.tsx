@@ -103,6 +103,7 @@ export const DateInputs = ({ onDateChange }: Props) => {
       setDayError(ErrorMessage.InvalidDate);
       setMonthError(' ');
       setYearError(' ');
+      onDateChange(null);
       return;
     }
 
@@ -113,15 +114,22 @@ export const DateInputs = ({ onDateChange }: Props) => {
         m === new Date().getMonth() + 1 &&
         d > new Date().getDate())
     ) {
-      setYearError(ErrorMessage.FutureDate);
+      setDayError(ErrorMessage.FutureDate);
       setMonthError(' ');
-      setDayError(' ');
+      setYearError(' ');
+      onDateChange(null);
       return;
     }
 
     setDayError('');
     setMonthError('');
     setYearError('');
+
+    onDateChange({
+      days: parseInt(day(), 10),
+      months: parseInt(month(), 10),
+      years: parseInt(year(), 10),
+    });
   };
 
   const onInput = (value: string, type: DateType) => {
@@ -137,11 +145,6 @@ export const DateInputs = ({ onDateChange }: Props) => {
         break;
     }
     validateDate();
-    onDateChange({
-      days: parseInt(day(), 10),
-      months: parseInt(month(), 10),
-      years: parseInt(year(), 10),
-    });
   };
 
   return (
