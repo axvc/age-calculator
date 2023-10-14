@@ -11,10 +11,13 @@ export const MainContainer = () => {
   const [ageResult, setAgeResult] = createSignal<Age | null>(null);
 
   const updateAgeResult = () => {
+    const formattedDate = `${age()?.years}-${String(age()?.months).padStart(
+      2,
+      '0',
+    )}-${String(age()?.days).padStart(2, '0')}`;
+
     const duration = moment.duration(
-      moment().diff(
-        moment(new Date(`${age()?.years}-${age()?.months}-${age()?.days}`)),
-      ),
+      moment().diff(moment(new Date(formattedDate))),
     );
 
     setAgeResult({
