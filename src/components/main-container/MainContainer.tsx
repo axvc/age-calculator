@@ -29,9 +29,9 @@ export const MainContainer = () => {
       <DateInputs onDateChange={newAge => setAge(newAge)} />
       <Divider onSubmit={() => updateAgeResult()} />
       <AgeResult
-        days={ageResult()?.days}
-        months={ageResult()?.months}
-        years={ageResult()?.years}
+        days={ageResult()?.days || null}
+        months={ageResult()?.months || null}
+        years={ageResult()?.years || null}
       />
     </div>
   );
