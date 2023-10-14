@@ -1,7 +1,7 @@
 import './DateInputs.sass';
-import { Age } from '../../types/Age.ts';
 import { createSignal } from 'solid-js';
-import { DateType } from '../../types/DateType.ts';
+import { Age } from 'types/Age.ts';
+import { DateType } from 'types/DateType.ts';
 
 enum DateLimit {
   MinDay = 1,
